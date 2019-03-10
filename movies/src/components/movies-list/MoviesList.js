@@ -1,7 +1,8 @@
 import React from 'react';
 import MoviesListItem from './movies-list-item/MoviesListItem';
 import MoviesCount from './MoviesCount';
-
+import Sorting from '../sorting/Sorting';
+import {NO_FILMS_WARNING} from '../../environment/const';
 class MoviesList extends React.Component {
     render = () => {
         const moviesList = [{
@@ -13,11 +14,18 @@ class MoviesList extends React.Component {
             description: 'Four interlocking tales that take place in a fading hotel on New Years Eve'
         }];
         return (
-            <main>
+             <main>
+            {moviesList.length ?
+                <div>       
                 <MoviesCount count={moviesList.length}/>
+                <Sorting/>
                 {moviesList.map((item, key) => (<MoviesListItem key={key} title={item.title}
-                    releaseDate={item.releaseDate} description={item.description} url={item.url}/>))}
+                    releaseDate={item.releaseDate} description={item.description} url={item.url}/>))}           
+                </div>
+                :<div>{NO_FILMS_WARNING}</div>
+                }
             </main>
+            
         )
     }
 }

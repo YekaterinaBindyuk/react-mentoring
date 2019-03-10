@@ -4,7 +4,7 @@ import ErrorBoundary from "./ErrorBoundary";
 import AppLogo from "./AppLogo";
 import Search from "./search/Search";
 
-const App = props => {
+const App = () => {
   return (
     <div>
       <ErrorBoundary>
