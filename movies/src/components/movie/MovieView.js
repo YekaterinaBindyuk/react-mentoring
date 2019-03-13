@@ -4,6 +4,7 @@ import MovieCover from "./MovieCover";
 import MovieDescription from "./MovieDescription";
 import MovieDetails from "./MovieDetails";
 import MovieGenres from "./MovieGenres";
+import '../../style/movie.css';
 
 import { MOVIE_COVER } from "../../environment/const";
 import RecommendedMovies from "./RecommendedMovies";

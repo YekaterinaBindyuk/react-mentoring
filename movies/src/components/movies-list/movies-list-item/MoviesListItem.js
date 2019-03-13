@@ -9,11 +9,10 @@ class MovieListItem extends React.Component {
         const {id, title, releaseDate, description, url } = this.props;
 
         return (
-            <div>
+            <div className="movies-list-item">
                 <MovieCover title={title} type={MOVIE_LIST_ITEM_COVER} url={url}/>
                 <MovieTitle title={title} />
                 <div>{releaseDate}</div>
-                <MovieDescription description={description} />
             </div>
         )
     }

@@ -1,6 +1,5 @@
 import React from "react";
-import {GENRE_TYPE_BUTTON, TITLE_TYPE_BUTTON} from '../../environment/const';
-
+import {GENRE_TYPE_BUTTON, TITLE_TYPE_BUTTON, SEARCH_TEXT} from '../../environment/const';
 class SearchType extends React.Component {
   constructor(props) {
     super(props);
@@ -10,9 +9,9 @@ class SearchType extends React.Component {
   render = () => {
     const {onSearchByTitleClick, onSearchByGenreClick} = this.props;
     return (
-      <div>
-        <button onClick={onSearchByTitleClick}>{GENRE_TYPE_BUTTON}</button>
-        <button onClick={onSearchByGenreClick}>{TITLE_TYPE_BUTTON}</button>
+      <div>{SEARCH_TEXT}
+        <button onClick={onSearchByTitleClick} className="btn btn-dark m-1">{GENRE_TYPE_BUTTON}</button>
+        <button onClick={onSearchByGenreClick} className="btn btn-dark">{TITLE_TYPE_BUTTON}</button>
       </div>
     );
   };

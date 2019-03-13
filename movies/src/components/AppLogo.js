@@ -5,7 +5,7 @@ import { MAIN_PAGE } from "../environment/const";
 const AppLogo = props => {
   return (
     <a href={MAIN_PAGE}>
-      <img src={MAIN_LOGO} alt="logo" />
+      <img src={MAIN_LOGO} alt="logo" className="app-logo"/>
     </a>
   );
 };

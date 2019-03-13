@@ -1,5 +1,10 @@
 import React from "react";
-import {SORTING_TEXT, RATING_TYPE_BUTTON, RELEASE_TYPE_BUTTON} from '../../environment/const';
+import {
+  SORTING_TEXT,
+  RATING_TYPE_BUTTON,
+  RELEASE_TYPE_BUTTON
+} from "../../environment/const";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Sorting extends React.Component {
   constructor(props) {
@@ -15,9 +20,24 @@ class Sorting extends React.Component {
   };
   render = () => {
     return (
-      <div> {SORTING_TEXT}
-        <button onClick={this.onSearchByTitleClick}>{RELEASE_TYPE_BUTTON}</button>
-        <button onClick={this.onSearchByGenreClick}>{RATING_TYPE_BUTTON}</button>
+      <div className="sort">
+        {SORTING_TEXT}
+        <button
+          className="btn btn-dark m-1"
+          onClick={this.onSearchByTitleClick}
+        >
+          <FontAwesomeIcon icon="calendar-alt" className="mr-1" />
+          {RELEASE_TYPE_BUTTON}
+        </button>
+        <button
+          className="btn btn-dark"
+          onClick={this.onSearchByGenreClick}
+        >
+          <FontAwesomeIcon icon="star" />
+          <FontAwesomeIcon icon="star" />
+          <FontAwesomeIcon icon="star-half-alt" className="mr-1" />
+          {RATING_TYPE_BUTTON}
+        </button>
       </div>
     );
   };

@@ -1,6 +1,7 @@
 import React from "react";
 import { SEARCH_BUTTON } from "../../environment/const";
 import SearchType from "./SearchType";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Search extends React.Component {
   constructor(props) {
@@ -23,13 +24,15 @@ class Search extends React.Component {
 
   render = () => {
     return (
-      <div>
-        <input onChange={this.onSearchValueChange} />
-        <button>{SEARCH_BUTTON}</button>
+      <div className="search">
+        <input className="search-input" onChange={this.onSearchValueChange} />
+        <button className="btn btn-success m-2 ml-3"><FontAwesomeIcon icon="search" className="mr-1"/>{SEARCH_BUTTON}</button>
+        <div className="search-type">
         <SearchType
           onSearchByGenreClick={this.onSearchByGenreClick}
           onSearchByTitleClick={this.onSearchByTitleClick}
         />
+        </div>
       </div>
     );
   };

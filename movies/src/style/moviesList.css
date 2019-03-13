@@ -1,0 +1,51 @@
+.img_small {
+  width: 300px;
+  height: 400px;
+  margin-bottom: 10px;
+}
+
+.search-results-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 90px;
+  margin-bottom: 10px;
+  margin-left: 700px;
+}
+
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 100px;
+}
+
+.movies-list-item {
+  width: 450px;
+  margin: 20px 0 20px 0;
+}
+
+.movies-list-item .title {
+  font-size: 20pt;
+}
+
+.movies-count > * {
+  font-size: 30pt;
+}
+
+.sort {
+  margin-right: 50px;
+}
+
+.search {
+  text-align: center;
+}
+
+.search .search-input {
+  width: 500px;
+  height: 45px;
+  border-radius: 5px;
+}
+
+.search .search-type {
+    margin-left: 360px;
+    margin-top: 10px;
+}

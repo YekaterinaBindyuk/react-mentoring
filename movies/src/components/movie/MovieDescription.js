@@ -3,7 +3,7 @@ import React from 'react';
 const MovieDescription = (props) => {
     const { description } = props;
     return (
-        <div>{description}</div>
+        <div className="description">{description}</div>
     )
 }
 
