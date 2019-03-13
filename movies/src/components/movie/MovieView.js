@@ -3,7 +3,7 @@ import MovieTitle from "./MovieTitle";
 import MovieCover from "./MovieCover";
 import MovieDescription from "./MovieDescription";
 import MovieDetails from "./MovieDetails";
-import MovieGenres from "./MovieDetails";
+import MovieGenres from "./MovieGenres";
 
 import { MOVIE_COVER } from "../../environment/const";
 import RecommendedMovies from "./RecommendedMovies";
