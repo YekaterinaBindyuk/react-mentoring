@@ -19,7 +19,7 @@ class MoviesList extends React.Component {
                 <div>       
                 <MoviesCount count={moviesList.length}/>
                 <Sorting/>
-                {moviesList.map((item, key) => (<MoviesListItem key={key} title={item.title}
+                {moviesList.map((item, key) => (<MoviesListItem key={key} id={item.id} title={item.title}
                     releaseDate={item.releaseDate} description={item.description} url={item.url}/>))}           
                 </div>
                 :<div>{NO_FILMS_WARNING}</div>

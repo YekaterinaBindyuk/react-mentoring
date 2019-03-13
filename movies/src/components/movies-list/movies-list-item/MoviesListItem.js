@@ -6,7 +6,7 @@ import { MOVIE_LIST_ITEM_COVER } from '../../../environment/const';
 
 class MovieListItem extends React.Component {
     render = () => {
-        const { title, releaseDate, description, url } = this.props;
+        const {id, title, releaseDate, description, url } = this.props;
 
         return (
             <div>

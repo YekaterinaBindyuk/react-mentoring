@@ -1,26 +1,35 @@
 import React from "react";
-import { SEARCH_BUTTON } from '../../environment/const';
-import SearchType from './SearchType';
+import { SEARCH_BUTTON } from "../../environment/const";
+import SearchType from "./SearchType";
 
 class Search extends React.Component {
-  
   constructor(props) {
     super(props);
-    this.state = {search: null};
+    this.state = { searchInput: null, searchType: "title" };
   }
+
+  onSearchByTitleClick = () => {
+    this.setState({ searchType: "title" });
+  };
+  onSearchByGenreClick = () => {
+    this.setState({ searchType: "genre" });
+  };
 
   onSearchValueChange = e => {
     this.setState({
-      search: e.target.value
+      searchInput: e.target.value
     });
-  }
+  };
 
   render = () => {
     return (
       <div>
-        <input onChange={this.onSearchValueChange}/>
+        <input onChange={this.onSearchValueChange} />
         <button>{SEARCH_BUTTON}</button>
-        <SearchType/>
+        <SearchType
+          onSearchByGenreClick={this.onSearchByGenreClick}
+          onSearchByTitleClick={this.onSearchByTitleClick}
+        />
       </div>
     );
   };

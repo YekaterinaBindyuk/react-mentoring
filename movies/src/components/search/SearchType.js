@@ -7,17 +7,12 @@ class SearchType extends React.Component {
     this.state = { searchType: "title" };
   }
 
-  onSearchByTitleClick = e => {
-    this.setState({ searchType: "title" });
-  };
-  onSearchByGenreClick = e => {
-    this.setState({ searchType: "genre" });
-  };
   render = () => {
+    const {onSearchByTitleClick, onSearchByGenreClick} = this.props;
     return (
       <div>
-        <button onClick={this.onSearchByTitleClick}>{GENRE_TYPE_BUTTON}</button>
-        <button onClick={this.onSearchByGenreClick}>{TITLE_TYPE_BUTTON}</button>
+        <button onClick={onSearchByTitleClick}>{GENRE_TYPE_BUTTON}</button>
+        <button onClick={onSearchByGenreClick}>{TITLE_TYPE_BUTTON}</button>
       </div>
     );
   };
