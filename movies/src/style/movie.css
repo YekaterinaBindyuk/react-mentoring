@@ -1,4 +1,22 @@
-.img_large{
-    width: 400px;
-    height: 600px;
+.img_large {
+  width: 400px;
+  height: 500px;
+}
+
+.movie-view {
+  text-align: center;
+}
+
+.recommended {
+  font-size: 35pt;
+  font-weight: bold;
+  margin-top: 100px;
+}
+
+.recommended .search-results-info {
+  margin-top: 30px;
+}
+
+.movie-view .description {
+    width: 600px;
 }

@@ -5,7 +5,7 @@ class RecommendedMovies extends React.Component {
   render = () => {
 
     return (
-      <div>
+      <div className="recommended">
         {RECOMMENDED_MOVIES}
         <MoviesList />
       </div>
