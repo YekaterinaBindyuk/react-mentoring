@@ -11,6 +11,6 @@ export const RELEASE_TYPE_BUTTON = 'release date';
 export const SORTING_TEXT = 'Sort by: ';
 export const SEARCH_TEXT = 'Search by: ';
 export const NO_FILMS_WARNING = 'No films found';
-export const MOVIES_COUNT_TEXT = ' films found';
+export const MOVIES_COUNT_TEXT = ' films found:';
 export const RECOMMENDED_MOVIES = 'Recommended movies';
 export const MAIN_PAGE = '/';

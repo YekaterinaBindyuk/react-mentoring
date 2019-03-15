@@ -5,7 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const MoviesCount = (props) => {
     const {count} = props;
     return(
-        <div className="movies-count"><FontAwesomeIcon icon="film" className="mr-1 ml-5"/><span>{count} {MOVIES_COUNT_TEXT}</span></div>
+        <div className="movies-count">
+        <div className="badge badge-dark p-2"><FontAwesomeIcon icon="film" className="mlr-1"/><span>{MOVIES_COUNT_TEXT} <span className="badge badge-light">{count}</span></span></div>
+        </div>
     )
 }
 

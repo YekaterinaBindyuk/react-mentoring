@@ -2,7 +2,6 @@ import React from "react";
 import MovieTitle from "./MovieTitle";
 import MovieCover from "./MovieCover";
 import MovieDescription from "./MovieDescription";
-import MovieRating from "./MovieRating";
 import MovieDetails from "./MovieDetails";
 import MovieGenres from "./MovieGenres";
 import '../../style/movie.css';
@@ -15,10 +14,12 @@ class MovieView extends React.Component {
     const { title, releaseDate, duration, description, genres, url } = this.props;
     return (
       <div className='movie-view'>
+        <div className='movie-item'>
         <MovieCover title={title} type={MOVIE_COVER} url={url}/>
         <MovieTitle title={title}/>
         <MovieGenres genres={genres}/>
         <MovieDetails releaseDate={releaseDate} duration={duration}/>
+        </div>
         <MovieDescription description={description}/>
         <RecommendedMovies/>
       </div>

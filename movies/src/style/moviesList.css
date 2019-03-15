@@ -11,6 +11,9 @@
   margin-bottom: 10px;
   margin-left: 700px;
 }
+.movies-count{
+  margin-left:130px;
+}
 
 .movies-list {
   display: flex;
@@ -28,7 +31,7 @@
 }
 
 .movies-count > * {
-  font-size: 30pt;
+  font-size: 20pt;
 }
 
 .sort {

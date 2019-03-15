@@ -7,6 +7,14 @@
   text-align: center;
 }
 
+.movie-item *{
+  margin-bottom: 15px;
+}
+
+.movie-item .title{
+  font-size: 35pt;
+}
+
 .recommended {
   font-size: 35pt;
   font-weight: bold;
@@ -19,4 +27,5 @@
 
 .movie-view .description {
     width: 600px;
+    margin-left: 34%;
 }

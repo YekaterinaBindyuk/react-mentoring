@@ -3,7 +3,7 @@ import React from 'react';
 const MovieRating = (props) => {
     const { rating } = props;
     return (
-        <div>{rating}</div>
+        <div className="badge badge-pill badge-success">{rating}</div>
     )
 }
 
