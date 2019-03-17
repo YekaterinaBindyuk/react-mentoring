@@ -2,6 +2,10 @@
 
 exports[`App should render correctly in "debug" mode 1`] = `
 <div>
-  sfdsdfs
+  <ErrorBoundary>
+    <AppLogo />
+    <Search />
+    <MoviesList />
+  </ErrorBoundary>
 </div>
 `;
