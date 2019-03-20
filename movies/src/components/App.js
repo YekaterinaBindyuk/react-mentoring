@@ -1,16 +1,18 @@
 import React from "react";
-import MoviesList from "./movies-list/MoviesList";
+import SearchResults from "./search-results/SearchResults";
 import ErrorBoundary from "./ErrorBoundary";
 import AppLogo from "./AppLogo";
 import Search from "./search/Search";
+
 const App = () => {
+ 
   return (
     <div>
       <ErrorBoundary>
         <AppLogo />
         <Search/>
-        <MoviesList/>
-      </ErrorBoundary>
+        <SearchResults/>
+        </ErrorBoundary>
     </div>
   );
 };

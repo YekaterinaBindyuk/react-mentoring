@@ -2,7 +2,7 @@ import React from 'react';
 import {MOVIES_COUNT_TEXT} from '../../environment/const';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const MoviesCount = (props) => {
+const SearchResultsCount = (props) => {
     const {count} = props;
     return(
         <div className="movies-count">
@@ -11,4 +11,4 @@ const MoviesCount = (props) => {
     )
 }
 
-export default MoviesCount;
+export default SearchResultsCount;
