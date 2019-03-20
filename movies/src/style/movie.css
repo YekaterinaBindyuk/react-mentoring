@@ -7,11 +7,13 @@
   text-align: center;
 }
 
-.movie-item *{
+.movie-details *{
   margin-bottom: 15px;
 }
 
-.movie-item .title{
+.movie-view .title{
+  display: inline;
+  margin-left: 20px;
   font-size: 35pt;
 }
 
@@ -19,6 +21,7 @@
   font-size: 35pt;
   font-weight: bold;
   margin-top: 100px;
+  text-align: center;
 }
 
 .recommended .search-results-info {

@@ -1,7 +1,7 @@
 import React from 'react';
-import MovieCover from '../../movie/MovieCover';
-import MovieTitle from '../../movie/MovieTitle';
-import MovieGenres from '../../movie/MovieGenres';
+import MovieCover from '../../movie/movie-item/MovieCover';
+import MovieTitle from '../../movie/movie-item/MovieTitle';
+import MovieGenres from '../../movie/movie-item/MovieGenres';
 import { MOVIE_LIST_ITEM_COVER } from '../../../environment/const';
 
 class MovieListItem extends React.Component {
