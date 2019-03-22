@@ -22,16 +22,16 @@ class Sorting extends React.Component {
     return (
       <div className="sort">
         {SORTING_TEXT}
-        <button
+        <button id="sort-by-release-btn"
           className="btn btn-dark m-1"
-          onClick={this.onSearchByTitleClick}
+          onClick={this.onSortByReleaseClick}
         >
           <FontAwesomeIcon icon="calendar-alt" className="mr-1" />
           {RELEASE_TYPE_BUTTON}
         </button>
-        <button
+        <button id="sort-by-rating-btn"
           className="btn btn-dark"
-          onClick={this.onSearchByGenreClick}
+          onClick={this.onSortByRatingClick}
         >
           <FontAwesomeIcon icon="star" />
           <FontAwesomeIcon icon="star" />

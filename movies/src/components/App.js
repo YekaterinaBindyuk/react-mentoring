@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div>
       <ErrorBoundary>
-        <AppLogo />
+        <AppLogo/>
         <Search/>
         <SearchResults/>
         </ErrorBoundary>
