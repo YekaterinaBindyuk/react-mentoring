@@ -1,9 +1,9 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render } from 'enzyme';
 import App from './App';
 describe('App', () => {
   it('should render correctly in "debug" mode', () => {
-    const component = shallow(<App debug />);
+    const component = render(<App debug />);
   
     expect(component).toMatchSnapshot();
   });
