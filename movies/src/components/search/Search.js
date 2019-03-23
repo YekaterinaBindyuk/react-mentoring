@@ -31,7 +31,7 @@ class Search extends React.Component {
           className="search-input"
           onChange={this.onSearchValueChange}
         />
-        <button className="btn btn-success m-2 ml-3">
+        <button id="search-btn" className="btn btn-success m-2 ml-3">
           <FontAwesomeIcon icon="search" className="mr-1" />
           {SEARCH_BUTTON}
         </button>
