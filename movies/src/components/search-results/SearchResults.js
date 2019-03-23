@@ -8,7 +8,7 @@ import "../../style/moviesList.css";
 
 class SearchResults extends React.Component {
   render = () => {
-    const moviesList = [
+    const {moviesList = [
       {
         id: 1,
         title: "Star Wars: The Last Jedi",
@@ -89,7 +89,7 @@ class SearchResults extends React.Component {
         description:
           "Four interlocking tales that take place in a fading hotel on New Years Eve"
       }
-    ];
+    ]} = this.props;
     return (
       <main>
         {moviesList.length ? (
