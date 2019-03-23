@@ -1,8 +1,7 @@
 import React from "react";
 import ErrorBoundary from "./ErrorBoundary";
-import { mount, error, shallow } from "enzyme";
+import { mount, error } from "enzyme";
 import { WARNING } from "../environment/const";
-import renderer from "react-test-renderer";
 
 function ProblemChild() {
   return null;
@@ -25,3 +24,12 @@ it("updates state correctly", () => {
   });
 });
 
+it("renders warning in case of error", () => {
+  const wrapper = mount(
+    <ErrorBoundary>
+      <ProblemChild />
+    </ErrorBoundary>
+  );
+  wrapper.setState({ hasError: true });
+  expect(wrapper.html()).toEqual("<h1>" + WARNING + "</h1>");
+});
