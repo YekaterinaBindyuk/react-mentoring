@@ -14,3 +14,5 @@ export const NO_FILMS_WARNING = 'No films found';
 export const MOVIES_COUNT_TEXT = ' films found:';
 export const RECOMMENDED_MOVIES = 'Recommended movies';
 export const MAIN_PAGE = '/';
+export const REST_URL = 'https://reactjs-cdp.herokuapp.com/';
+export const MOVIES_URL = REST_URL + 'movies';

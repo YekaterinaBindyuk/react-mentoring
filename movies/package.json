@@ -26,7 +26,6 @@
     "build:prod": "webpack --config ./webpack.config.js --env production --progress",
     "start": "webpack-dev-server --config ./webpack.config.js --env development --progress",
     "cypress": "cypress open"
-
   },
   "author": "Yekaterina_Bindyuk",
   "license": "ISC",
@@ -34,6 +33,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.15",
     "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "axios": "^0.18.0",
     "babel-install": "^2.1.0",
     "babel-register": "^6.26.0",
     "bootstrap": "^4.3.1",
@@ -46,6 +46,8 @@
     "react-redux": "^6.0.0",
     "react-router": "^4.3.1",
     "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "registry-url": "^5.0.0",
     "style-loader": "^0.23.1"
   },
   "devDependencies": {
