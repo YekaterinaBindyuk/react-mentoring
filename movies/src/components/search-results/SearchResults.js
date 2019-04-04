@@ -12,6 +12,7 @@ class SearchResults extends React.Component {
   componentDidMount = () => {
     const { getMovies } = this.props;
     getMovies();
+
   };
   render = () => {
     const { moviesList } = this.props;
@@ -34,7 +35,7 @@ class SearchResults extends React.Component {
 }
 
 const mapDispatchToProps = {
-  getMovies: actionCreators.getMovies
+  getMovies: actionCreators.getMovieList,
 };
 
 const mapStateToProps = state => {

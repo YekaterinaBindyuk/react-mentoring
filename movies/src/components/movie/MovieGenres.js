@@ -4,9 +4,11 @@ const MovieGenres = (props) => {
     const {genres} = props;
 
     return (
-        <div className="genres">
+        <section>
+        {genres && <div className="genres">
         {genres.join(', ')} 
-        </div>
+        </div>}
+        </section>
     )
 }
 

@@ -5,6 +5,20 @@ const getMovies = () => {
     return axios.get(MOVIES_URL).then(({ data }) => data);
 };
 
+
+const getMovie = (id) => {
+    const url = MOVIES_URL + '/' + id;
+    return axios.get(url).then(({ data }) => data);
+};
+
+const getRecommendedMovies = (genres) => {
+    const url = MOVIES_URL + '?filter=' + genres[0];
+    return axios.get(url).then(({ data }) => data);
+};
+
+
 export default {
-    getMovies
+    getMovies,
+    getMovie,
+    getRecommendedMovies
 };
