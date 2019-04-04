@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 
 import "../../style/moviesList.css";
 
-class SearchResults extends React.Component {
+export class SearchResults extends React.Component {
   componentDidMount = () => {
     const { getMovies } = this.props;
     getMovies();

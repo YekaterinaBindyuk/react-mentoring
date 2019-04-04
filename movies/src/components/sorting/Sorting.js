@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import actionCreators from "../../redux/action-creators/actionCreators";
 import { connect } from "react-redux";
 
-class Sorting extends React.Component {
+export class Sorting extends React.Component {
   constructor(props) {
     super(props);
     this.state = { sortingType: "release_date" };
