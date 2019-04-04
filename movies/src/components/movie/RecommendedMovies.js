@@ -4,20 +4,13 @@ import { RECOMMENDED_MOVIES } from "../../environment/const";
 import actionCreators from "../../redux/action-creators/actionCreators";
 import { connect } from "react-redux";
 
-class RecommendedMovies extends React.Component {
-  componentDidMount = () => {
-    const { getRecommendedMovies, genres } = this.props;
-    if (genres) {
-      getRecommendedMovies(genres);
-    }
-  };
-
+export class RecommendedMovies extends React.Component {
+  
   componentDidUpdate(prevProps) {
     const { getRecommendedMovies, genres } = this.props;
     if (genres && this.props.genres !== prevProps.genres) {
       getRecommendedMovies(genres);
     }
-
   }
 
   render = () => {
