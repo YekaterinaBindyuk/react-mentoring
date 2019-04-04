@@ -12,7 +12,7 @@ const getMovie = (id) => {
 };
 
 const getRecommendedMovies = (genres) => {
-    const url = MOVIES_URL + '?filter=' + genres[0];
+    const url = MOVIES_URL + '?filter=' + genres.join(',');
     return axios.get(url).then(({ data }) => data);
 };
 

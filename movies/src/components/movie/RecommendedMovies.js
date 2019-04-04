@@ -5,27 +5,34 @@ import actionCreators from "../../redux/action-creators/actionCreators";
 import { connect } from "react-redux";
 
 class RecommendedMovies extends React.Component {
-  
   componentDidMount = () => {
     const { getRecommendedMovies, genres } = this.props;
-    getRecommendedMovies(genres);
+    if (genres) {
+      getRecommendedMovies(genres);
+    }
+  };
+
+  componentDidUpdate(prevProps) {
+    const { getRecommendedMovies, genres } = this.props;
+    if (genres && this.props.genres !== prevProps.genres) {
+      getRecommendedMovies(genres);
+    }
+
   }
 
   render = () => {
     const { moviesList } = this.props;
-  
-    if(moviesList.length){
+
+    if (moviesList.length) {
       return (
         <div className="recommended">
           {RECOMMENDED_MOVIES}
-          <MoviesList moviesList={moviesList}/>
+          <MoviesList moviesList={moviesList} />
         </div>
       );
     } else return null;
-    
   };
 }
-
 
 const mapDispatchToProps = {
   getRecommendedMovies: actionCreators.getRecommendedMovies
