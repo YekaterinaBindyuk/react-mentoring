@@ -27,7 +27,7 @@ class Sorting extends React.Component {
   };
   
   onSortByRatingClick = e => {
-    this.setState({ sortingType: "vote_count" });
+    this.setState({ sortingType: "vote_average" });
   };
 
   render = () => {

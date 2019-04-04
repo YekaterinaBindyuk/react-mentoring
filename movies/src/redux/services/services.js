@@ -17,7 +17,7 @@ const getRecommendedMovies = (genres) => {
 };
 
 const sortMovies = (sortBy) => {
-    const url = MOVIES_URL + '?sortBy=' + sortBy;
+    const url = MOVIES_URL + '?sortBy=' + sortBy + '&sortOrder=desc';
     return axios.get(url).then(({ data }) => data);
 };
 
