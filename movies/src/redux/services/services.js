@@ -16,9 +16,20 @@ const getRecommendedMovies = (genres) => {
     return axios.get(url).then(({ data }) => data);
 };
 
+const sortMovies = (sortBy) => {
+    const url = MOVIES_URL + '?sortBy=' + sortBy;
+    return axios.get(url).then(({ data }) => data);
+};
+
+const searchMovies = (searchValue, searchBy) => {
+    const url = MOVIES_URL + '?search=' + searchValue + '&searchBy=' + searchBy;
+    return axios.get(url).then(({ data }) => data);
+};
 
 export default {
     getMovies,
     getMovie,
-    getRecommendedMovies
+    getRecommendedMovies,
+    sortMovies,
+    searchMovies
 };

@@ -27,7 +27,7 @@ class MovieView extends React.Component {
       runtime,
       overview,
       genres,
-      vote_average,
+      vote_count,
       poster_path
     } = this.props.movie;
     return (
@@ -38,7 +38,7 @@ class MovieView extends React.Component {
           <div className="movie-details">
             <MovieCover title={title} type={MOVIE_COVER} url={poster_path} />
             <MovieGenres genres={genres} />
-            <MovieRating rating={vote_average} />
+            <MovieRating rating={vote_count} />
             <MovieDetails releaseDate={release_date} duration={runtime} />
           </div>
           <MovieDescription description={overview} />

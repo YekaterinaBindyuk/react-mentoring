@@ -5,31 +5,45 @@ import {
   RELEASE_TYPE_BUTTON
 } from "../../environment/const";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import actionCreators from "../../redux/action-creators/actionCreators";
+import { connect } from "react-redux";
 
 class Sorting extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { sortingType: "release" };
+    this.state = { sortingType: "release_date" };
   }
 
+  componentDidUpdate = (prevProps, prevState) => {
+    const { sortMovies } = this.props;
+    const { sortingType } = this.state;
+    if (prevState.sortingType !== sortingType) {
+      sortMovies(sortingType);
+    }
+  };
+
   onSortByReleaseClick = e => {
-    this.setState({ sortingType: "release" });
+    this.setState({ sortingType: "release_date" });
   };
+  
   onSortByRatingClick = e => {
-    this.setState({ sortingType: "rating" });
+    this.setState({ sortingType: "vote_count" });
   };
+
   render = () => {
     return (
       <div className="sort">
         {SORTING_TEXT}
-        <button id="sort-by-release-btn"
+        <button
+          id="sort-by-release-btn"
           className="btn btn-dark m-1"
           onClick={this.onSortByReleaseClick}
         >
           <FontAwesomeIcon icon="calendar-alt" className="mr-1" />
           {RELEASE_TYPE_BUTTON}
         </button>
-        <button id="sort-by-rating-btn"
+        <button
+          id="sort-by-rating-btn"
           className="btn btn-dark"
           onClick={this.onSortByRatingClick}
         >
@@ -43,4 +57,11 @@ class Sorting extends React.Component {
   };
 }
 
-export default Sorting;
+const mapDispatchToProps = {
+  sortMovies: actionCreators.sortMovies
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Sorting);

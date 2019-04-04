@@ -1,5 +1,5 @@
 import services from "../services/services";
-import { GET_MOVIE_LIST_SUCCESS, GET_MOVIE_SUCCESS, GET_RECOMMENDED_MOVIES_SUCCESS } from "../actions/actions";
+import { GET_MOVIE_LIST_SUCCESS, GET_MOVIE_SUCCESS, GET_RECOMMENDED_MOVIES_SUCCESS, SORT_MOVIES_SUCCESS, SEARCH_MOVIES_SUCCESS } from "../actions/actions";
 
 const getMovieList = () => dispatch => {
   services.getMovies().then(res => {
@@ -34,8 +34,32 @@ const getRecommendedMoviesSuccess = movies => ({
   movies
 });
 
+const sortMovies  = (sortBy) => dispatch => {
+  services.sortMovies(sortBy).then(res => {
+    dispatch(sortMoviesSuccess(res.data));
+  })
+};
+
+const sortMoviesSuccess = movies => ({
+  type: SORT_MOVIES_SUCCESS,
+  movies
+});
+
+const searchMovies  = (searchValue, searchBy) => dispatch => {
+  services.searchMovies(searchValue, searchBy).then(res => {
+    dispatch(searchMoviesSuccess(res.data));
+  })
+};
+
+const searchMoviesSuccess = movies => ({
+  type: SEARCH_MOVIES_SUCCESS,
+  movies
+});
+
 export default {
   getMovieList,
   getMovie,
-  getRecommendedMovies
+  getRecommendedMovies,
+  sortMovies,
+  searchMovies
 };

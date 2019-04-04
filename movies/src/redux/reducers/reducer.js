@@ -3,7 +3,8 @@ import * as actions from "../actions/actions";
 const initState = {
   movies: [],
   movie: {},
-  recommendedMovies: []
+  recommendedMovies: [],
+  test: ["init"]
 };
 
 export default function reducer(state = initState, action) {
@@ -14,6 +15,10 @@ export default function reducer(state = initState, action) {
       return { ...state, movie: action.movie };
     case actions.GET_RECOMMENDED_MOVIES_SUCCESS:
       return { ...state, recommendedMovies: action.movies };
+    case actions.SORT_MOVIES_SUCCESS:
+      return { ...state, movies: action.movies };
+    case actions.SEARCH_MOVIES_SUCCESS:
+      return { ...state, movies: action.movies };
     default:
       return state;
   }
