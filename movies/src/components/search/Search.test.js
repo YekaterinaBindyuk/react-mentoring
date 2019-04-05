@@ -17,3 +17,10 @@ it("updates state: searchType correctly", () => {
   wrapper.find("button#search-by-genre-btn").simulate("click");
   expect(wrapper.state("searchType")).toEqual("genre");
 });
+
+it("should search movies", () => {
+  const mockSearchMoviesfn = jest.fn();
+  const wrapper = mount(<Search searchMovies={mockSearchMoviesfn}/>);
+  wrapper.find("button#search-btn").simulate("click");
+  expect(mockSearchMoviesfn).toHaveBeenCalled()
+});

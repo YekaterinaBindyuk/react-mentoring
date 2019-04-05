@@ -4,13 +4,12 @@ import { RecommendedMovies } from "./RecommendedMovies";
 
 describe("RecommendedMovies", () => {
   it('should render correctly in "debug" mode', () => {
-    const moviesList=[
+    const moviesList = [
       {
         budget: 0,
         genres: ["Comedy"],
         id: 447365,
-        overview:
-          "The third film based on Marvel's Guardians of the Galaxy.",
+        overview: "The third film based on Marvel's Guardians of the Galaxy.",
         poster_path:
           "https://image.tmdb.org/t/p/w500/ldoY4fTZkGISMidNw60GHoNdgP8.jpg",
         release_date: "2020-05-01",
@@ -22,25 +21,25 @@ describe("RecommendedMovies", () => {
         vote_count: 9
       }
     ];
-    const component = render(
-      <RecommendedMovies moviesList={moviesList}/>
-    );
+    const component = render(<RecommendedMovies moviesList={moviesList} />);
     expect(component).toMatchSnapshot();
   });
 });
 
 describe("RecommendedMovies", () => {
-it('should get recommended movies on update', () => {
-  const mockGetRecommendedMoviesfn = jest.fn();
+  it("should get recommended movies on update", () => {
+    const mockGetRecommendedMoviesfn = jest.fn();
 
-  const props =  {
-    moviesList: [],
-    getRecommendedMovies: mockGetRecommendedMoviesfn, 
-    genres: ['Comedy']
-  }
-  const wrapper = mount(<RecommendedMovies  {...props}/>);
-  expect(wrapper.props.getRecommendedMovies).toHaveBeenCalled()
+    const props = {
+      moviesList: [],
+      getRecommendedMovies: mockGetRecommendedMoviesfn,
+      genres: ["Comedy"]
+    };
+    const component = mount(
+      <RecommendedMovies  {...props}
+      />
+    );
+    component.setProps({ genres: ["Comedy", "Action"] });
+    expect(mockGetRecommendedMoviesfn).toHaveBeenCalled();
+  });
 });
-});
-
-
