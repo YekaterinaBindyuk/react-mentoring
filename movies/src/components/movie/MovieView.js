@@ -14,7 +14,7 @@ import "../../style/movie.css";
 import { MOVIE_COVER } from "../../environment/const";
 import RecommendedMovies from "./RecommendedMovies";
 
-class MovieView extends React.Component {
+export class MovieView extends React.Component {
   componentDidMount() {
     const { getMovie, id } = this.props;
     getMovie(id);
