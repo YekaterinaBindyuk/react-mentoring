@@ -3,8 +3,7 @@ import * as actions from "../actions/actions";
 const initState = {
   movies: [],
   movie: {},
-  recommendedMovies: [],
-  test: ["init"]
+  recommendedMovies: []
 };
 
 export default function reducer(state = initState, action) {
