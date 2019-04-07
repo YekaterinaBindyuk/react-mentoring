@@ -17,7 +17,6 @@ describe("async actions", () => {
       body: { movies: ["test"]},
       headers: { "content-type": "application/json" }
     });
-
     const expectedActions = [
       { type: types.GET_MOVIE_LIST },
       { type: types.GET_MOVIE_LIST_SUCCESS, body: { movies: ["test"]} }
