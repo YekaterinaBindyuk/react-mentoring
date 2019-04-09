@@ -8,7 +8,7 @@ import {
 } from "../actions/actions";
 
 export function getMovieList() {return dispatch => {
-  services.getMovies().then(res => {
+  return services.getMovies().then(res => {
     dispatch(getMovieListSuccess(res.data));
   });
 }};
@@ -21,7 +21,7 @@ export function getMovieListSuccess(movies) {
 }
 
 export function getMovie(id){return dispatch => {
-  services.getMovie(id).then(res => {
+  return services.getMovie(id).then(res => {
     dispatch(getMovieSuccess(res));
   });
 }};
@@ -33,11 +33,11 @@ export function getMovieSuccess(movie) {
   };
 }
 
-const getRecommendedMovies = genres => dispatch => {
-  services.getRecommendedMovies(genres).then(res => {
+export function getRecommendedMovies (genres) {return dispatch => {
+  return services.getRecommendedMovies(genres).then(res => {
     dispatch(getRecommendedMoviesSuccess(res.data));
   });
-};
+}};
 
 export function getRecommendedMoviesSuccess(movies) {
   return {
@@ -46,11 +46,11 @@ export function getRecommendedMoviesSuccess(movies) {
   };
 }
 
-const sortMovies = sortBy => dispatch => {
-  services.sortMovies(sortBy).then(res => {
+export function sortMovies(sortBy){ return dispatch => {
+  return services.sortMovies(sortBy).then(res => {
     dispatch(sortMoviesSuccess(res.data));
   });
-};
+}};
 
 export function sortMoviesSuccess(movies) {
   return {
@@ -59,11 +59,11 @@ export function sortMoviesSuccess(movies) {
   };
 }
 
-const searchMovies = (searchValue, searchBy) => dispatch => {
-  services.searchMovies(searchValue, searchBy).then(res => {
+export function searchMovies(searchValue, searchBy) { return dispatch => {
+  return services.searchMovies(searchValue, searchBy).then(res => {
     dispatch(searchMoviesSuccess(res.data));
   });
-};
+}};
 
 export function searchMoviesSuccess(movies){
   return{

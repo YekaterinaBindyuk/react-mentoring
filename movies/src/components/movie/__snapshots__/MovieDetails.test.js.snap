@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly: 01.01.2000 1`] = `
+<div>
+  <span
+    className="mr-5"
+  >
+    Release date: 
+    01.01.2000
+  </span>
+  <span
+    className="ml-5 badge badge-pill badge-dark"
+  >
+    180 min
+  </span>
+</div>
+`;

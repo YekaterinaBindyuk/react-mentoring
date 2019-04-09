@@ -18,7 +18,8 @@
     "coverageReporters": [
       "json",
       "html"
-    ]
+    ],
+    "testEnvironment": "node"
   },
   "scripts": {
     "test": "jest",
@@ -42,6 +43,7 @@
     "express": "^4.16.4",
     "fetch-mock": "^7.3.1",
     "jest-runner-cypress": "0.0.2",
+    "nock": "^10.0.6",
     "node-fetch": "^2.3.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -78,6 +80,8 @@
     "eslint-plugin-react": "^7.12.4",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.5.0",
+    "jsdom": "14.0.0",
+    "jsdom-global": "3.0.2",
     "redux-mock-store": "^1.5.3",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",

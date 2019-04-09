@@ -1,5 +1,5 @@
 import React from "react";
-import { render, mount } from "enzyme";
+import { render, shallow } from "enzyme";
 import { MOVIES_COUNT_TEXT } from "../../environment/const";
 
 import SearchResultsCount from "./SearchResultsCount";
@@ -12,7 +12,7 @@ describe("SearchResults", () => {
 
 it("renders movies count", () => {
   const count = 1;
-  const wrapper = mount(<SearchResultsCount count={count} />);
+  const wrapper = shallow(<SearchResultsCount count={count} />);
   expect(wrapper.html()).toEqual(
     '<div class="movies-count"><div class="badge badge-dark p-2"><i class="fa"></i><span>' +
       MOVIES_COUNT_TEXT +

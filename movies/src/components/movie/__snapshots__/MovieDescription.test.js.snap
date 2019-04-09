@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly: description 1`] = `
+<div
+  className="description"
+>
+  description
+</div>
+`;

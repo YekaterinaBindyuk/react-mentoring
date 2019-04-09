@@ -1,10 +1,11 @@
+import 'jsdom-global/register';
 import React from "react";
-import { mount } from "enzyme";
+import { shallow, mount } from "enzyme";
 import { Search } from "./Search";
 
 it("updates state: searchInput correctly", () => {
   const mockSearchMoviesfn = jest.fn();
-  const wrapper = mount(<Search searchMovies={mockSearchMoviesfn}/>);
+  const wrapper = shallow(<Search searchMovies={mockSearchMoviesfn}/>);
   wrapper.find("input#search-input").simulate("change", { target: { value: "test value" }} );
   expect(wrapper.state("searchInput")).toEqual("test value");
 });
@@ -20,7 +21,7 @@ it("updates state: searchType correctly", () => {
 
 it("should search movies", () => {
   const mockSearchMoviesfn = jest.fn();
-  const wrapper = mount(<Search searchMovies={mockSearchMoviesfn}/>);
+  const wrapper = shallow(<Search searchMovies={mockSearchMoviesfn}/>);
   wrapper.find("button#search-btn").simulate("click");
   expect(mockSearchMoviesfn).toHaveBeenCalled()
 });

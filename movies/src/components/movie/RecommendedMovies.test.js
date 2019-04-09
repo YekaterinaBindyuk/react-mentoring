@@ -1,5 +1,5 @@
 import React from "react";
-import { render, mount } from "enzyme";
+import { render, shallow } from "enzyme";
 import { RecommendedMovies } from "./RecommendedMovies";
 
 describe("RecommendedMovies", () => {
@@ -35,7 +35,7 @@ describe("RecommendedMovies", () => {
       getRecommendedMovies: mockGetRecommendedMoviesfn,
       genres: ["Comedy"]
     };
-    const component = mount(
+    const component = shallow(
       <RecommendedMovies  {...props}
       />
     );

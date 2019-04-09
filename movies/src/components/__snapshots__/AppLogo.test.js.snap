@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<a
+  href="/"
+>
+  <img
+    alt="logo"
+    className="app-logo"
+    src="http://localhost:8080/src/images/logo.png"
+  />
+</a>
+`;

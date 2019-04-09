@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResults should render correctly in "debug" mode 1`] = `
+<div
+  class="movies-count"
+>
+  <div
+    class="badge badge-dark p-2"
+  >
+    <i
+      class="fa"
+    />
+    <span>
+       films found: 
+      <span
+        class="badge badge-light"
+      >
+        1
+      </span>
+    </span>
+  </div>
+</div>
+`;
