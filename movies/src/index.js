@@ -7,8 +7,11 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { Provider } from "react-redux";
 //import reducer from "./redux/reducers/reducer";
 //import thunk from "redux-thunk";
-import { PersistGate } from 'redux-persist/integration/react'
-import {store, persistor}  from "./redux/reducers/configureStore";
+import { PersistGate } from "redux-persist/integration/react";
+import { store, persistor } from "./redux/reducers/configureStore";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import MovieView from "./components/movie/MovieView";
+import Page404 from "./components//Page404";
 
 import {
   faSearch,
@@ -33,10 +36,16 @@ library.add(
 const rootElement = document.getElementById("root");
 
 ReactDOM.render(
-  <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-      <App />
-    </PersistGate>
-  </Provider>,
+  <Router>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+      <Switch>
+      <Route path="/" exact component={App} />
+      <Route path="/movie/:id" component={MovieView}/>
+      <Route path="*" component={Page404} />
+      </Switch>
+      </PersistGate>
+    </Provider>
+  </Router>,
   rootElement
 );

@@ -16,7 +16,8 @@ import RecommendedMovies from "./RecommendedMovies";
 
 export class MovieView extends React.Component {
   componentDidMount() {
-    const { getMovie, id } = this.props;
+    const { getMovie } = this.props;
+    const { id } = this.props.match.params;
     getMovie(id);
   }
 
