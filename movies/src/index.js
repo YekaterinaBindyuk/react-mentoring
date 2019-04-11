@@ -11,7 +11,9 @@ import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "./redux/reducers/configureStore";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import MovieView from "./components/movie/MovieView";
-import Page404 from "./components//Page404";
+import Page404 from "./components/Page404";
+import AppLogo from "./components/AppLogo";
+import About from "./components/About";
 
 import {
   faSearch,
@@ -39,8 +41,10 @@ ReactDOM.render(
   <Router>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
+      <AppLogo/>
       <Switch>
       <Route path="/" exact component={App} />
+      <Route path="/About" component={About} />
       <Route path="/movie/:id" component={MovieView}/>
       <Route path="*" component={Page404} />
       </Switch>

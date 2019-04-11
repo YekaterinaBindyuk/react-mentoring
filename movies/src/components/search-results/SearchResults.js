@@ -11,7 +11,7 @@ import "../../style/moviesList.css";
 export class SearchResults extends React.Component {
   componentDidMount = () => {
     const { getMovies } = this.props;
-    getMovies();
+    //getMovies();
 
   };
   render = () => {
