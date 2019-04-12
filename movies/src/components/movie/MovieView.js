@@ -15,13 +15,11 @@ import { MOVIE_COVER } from "../../environment/const";
 import RecommendedMovies from "./RecommendedMovies";
 
 export class MovieView extends React.Component {
-  componentDidMount() {
+
+  render = () => {
     const { getMovie } = this.props;
     const { id } = this.props.match.params;
     getMovie(id);
-  }
-
-  render = () => {
     const {
       title,
       release_date,

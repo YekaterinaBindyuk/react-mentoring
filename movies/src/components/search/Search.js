@@ -2,13 +2,19 @@ import React from "react";
 import { SEARCH_BUTTON } from "../../environment/const";
 import SearchType from "./SearchType";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 export class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = { searchInput: null, searchType: "title" };
   };
+
+  onSearchClick = () => {
+    const {searchInput, searchType} = this.state;
+    const url = `/search?searchInput=${searchInput}&searchType=${searchType}`;
+    this.props.history.push(url);
+  }
 
   onSearchByTitleClick = () => {
     this.setState({ searchType: "title" });
@@ -25,7 +31,6 @@ export class Search extends React.Component {
   };
 
   render = () => {
-    const {searchInput, searchType} = this.state;
     return (
       <div className="search">
         <input
@@ -34,12 +39,10 @@ export class Search extends React.Component {
           onChange={this.onSearchValueChange}
         />
 
-        <Redirect to= {`/search?searchInput=${searchInput}&searchType=${searchType}`}>
-        <button id="search-btn" className="btn btn-success m-2 ml-3">
+        <button id="search-btn" className="btn btn-success m-2 ml-3" onClick={this.onSearchClick}>
           <FontAwesomeIcon icon="search" className="mr-1"/>
           {SEARCH_BUTTON}
         </button>
-        </Redirect>
         <div className="search-type">
           <SearchType
             onSearchByGenreClick={this.onSearchByGenreClick}
@@ -51,6 +54,6 @@ export class Search extends React.Component {
   };
 }
 
-export default Search;
+export default withRouter(Search);
 
 
