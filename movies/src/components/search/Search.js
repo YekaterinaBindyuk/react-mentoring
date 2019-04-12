@@ -2,20 +2,12 @@ import React from "react";
 import { SEARCH_BUTTON } from "../../environment/const";
 import SearchType from "./SearchType";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import actionCreators from "../../redux/action-creators/actionCreators";
-import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
 
 export class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = { searchInput: null, searchType: "title" };
-  };
-
-  onSearchClick = () => {
-    const { searchMovies } = this.props;
-    const {searchInput, searchType} = this.state;
-    searchMovies(searchInput, searchType);
   };
 
   onSearchByTitleClick = () => {
@@ -33,6 +25,7 @@ export class Search extends React.Component {
   };
 
   render = () => {
+    const {searchInput, searchType} = this.state;
     return (
       <div className="search">
         <input
@@ -40,10 +33,13 @@ export class Search extends React.Component {
           className="search-input"
           onChange={this.onSearchValueChange}
         />
-        <button id="search-btn" className="btn btn-success m-2 ml-3" onClick={this.onSearchClick}>
+
+        <Redirect to= {`/search?searchInput=${searchInput}&searchType=${searchType}`}>
+        <button id="search-btn" className="btn btn-success m-2 ml-3">
           <FontAwesomeIcon icon="search" className="mr-1"/>
           {SEARCH_BUTTON}
         </button>
+        </Redirect>
         <div className="search-type">
           <SearchType
             onSearchByGenreClick={this.onSearchByGenreClick}
@@ -55,12 +51,6 @@ export class Search extends React.Component {
   };
 }
 
+export default Search;
 
-const mapDispatchToProps = {
-  searchMovies: actionCreators.searchMovies
-};
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(Search);

@@ -44,7 +44,8 @@ ReactDOM.render(
       <AppLogo/>
       <Switch>
       <Route path="/" exact component={App} />
-      <Route path="/About" component={About} />
+      <Route path="/search" exact component={App} />
+      <Route path="/about" component={About} />
       <Route path="/movie/:id" component={MovieView}/>
       <Route path="*" component={Page404} />
       </Switch>
