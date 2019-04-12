@@ -22,8 +22,8 @@ it("updates state: searchType correctly", () => {
 });
 
 it("should search movies", () => {
-  const mockSearchMoviesfn = jest.fn();
-  const wrapper = shallow(<Search searchMovies={mockSearchMoviesfn} />);
+  const historyMock = {push: jest.fn()}
+  const wrapper = shallow(<Search history={historyMock} />);
   wrapper.find("button#search-btn").simulate("click");
-  expect(mockSearchMoviesfn).toHaveBeenCalled();
+  expect(historyMock.push).toHaveBeenCalled();
 });

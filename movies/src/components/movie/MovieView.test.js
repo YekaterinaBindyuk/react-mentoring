@@ -8,7 +8,8 @@ it("should get movie", () => {
   const props = {
     movie: {},
     id: "123",
-    getMovie: mockGetMoviefn
+    getMovie: mockGetMoviefn,
+    match: {params: {id: "123"}}
   };
   shallow(<MovieView {...props} />);
   expect(mockGetMoviefn).toHaveBeenCalledWith(props.id);
