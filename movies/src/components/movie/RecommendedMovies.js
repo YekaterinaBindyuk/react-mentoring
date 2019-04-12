@@ -5,7 +5,6 @@ import actionCreators from "../../redux/action-creators/actionCreators";
 import { connect } from "react-redux";
 
 export class RecommendedMovies extends React.Component {
-  
   componentDidUpdate(prevProps) {
     const { getRecommendedMovies, genres } = this.props;
     if (genres && this.props.genres !== prevProps.genres) {

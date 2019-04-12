@@ -9,11 +9,6 @@ import { connect } from "react-redux";
 import "../../style/moviesList.css";
 
 export class SearchResults extends React.Component {
-  componentDidMount = () => {
-    const { getMovies } = this.props;
-    //getMovies();
-
-  };
   render = () => {
     const { moviesList } = this.props;
     return (
@@ -34,9 +29,6 @@ export class SearchResults extends React.Component {
   };
 }
 
-const mapDispatchToProps = {
-  getMovies: actionCreators.getMovieList,
-};
 
 const mapStateToProps = state => {
   return {
@@ -46,5 +38,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(SearchResults);

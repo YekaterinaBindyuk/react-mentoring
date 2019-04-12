@@ -7,10 +7,11 @@ import actionCreators from "../redux/action-creators/actionCreators";
 import { connect } from "react-redux";
 
 export class App extends React.Component {
-
   render = () => {
     const { searchMovies } = this.props;
-    const { searchInput, searchType } = queryString.parse(this.props.location.search);
+    const { searchInput, searchType } = queryString.parse(
+      this.props.location.search
+    );
     if (searchInput && searchType) {
       searchMovies(searchInput, searchType);
     }

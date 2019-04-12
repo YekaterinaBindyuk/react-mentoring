@@ -8,13 +8,13 @@ export class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = { searchInput: null, searchType: "title" };
-  };
+  }
 
   onSearchClick = () => {
-    const {searchInput, searchType} = this.state;
+    const { searchInput, searchType } = this.state;
     const url = `/search?searchInput=${searchInput}&searchType=${searchType}`;
     this.props.history.push(url);
-  }
+  };
 
   onSearchByTitleClick = () => {
     this.setState({ searchType: "title" });
@@ -39,8 +39,12 @@ export class Search extends React.Component {
           onChange={this.onSearchValueChange}
         />
 
-        <button id="search-btn" className="btn btn-success m-2 ml-3" onClick={this.onSearchClick}>
-          <FontAwesomeIcon icon="search" className="mr-1"/>
+        <button
+          id="search-btn"
+          className="btn btn-success m-2 ml-3"
+          onClick={this.onSearchClick}
+        >
+          <FontAwesomeIcon icon="search" className="mr-1" />
           {SEARCH_BUTTON}
         </button>
         <div className="search-type">
@@ -55,5 +59,3 @@ export class Search extends React.Component {
 }
 
 export default withRouter(Search);
-
-

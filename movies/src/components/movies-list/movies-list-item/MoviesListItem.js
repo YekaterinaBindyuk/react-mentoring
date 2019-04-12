@@ -7,11 +7,11 @@ import { Link } from "react-router-dom";
 
 class MovieListItem extends React.Component {
   render = () => {
-    const {id, title, releaseDate, genres, url } = this.props;
+    const { id, title, releaseDate, genres, url } = this.props;
 
     return (
       <div className="movies-list-item">
-        <Link to = {`/movie/${id}`}>
+        <Link to={`/movie/${id}`}>
           <MovieCover title={title} type={MOVIE_LIST_ITEM_COVER} url={url} />
           <MovieTitle title={title} />
         </Link>

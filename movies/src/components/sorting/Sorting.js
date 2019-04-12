@@ -25,7 +25,7 @@ export class Sorting extends React.Component {
   onSortByReleaseClick = e => {
     this.setState({ sortingType: "release_date" });
   };
-  
+
   onSortByRatingClick = e => {
     this.setState({ sortingType: "vote_average" });
   };

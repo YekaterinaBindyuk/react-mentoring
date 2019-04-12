@@ -1,5 +1,5 @@
-import React from 'react';
-import {WARNING} from '../environment/const';
+import React from "react";
+import { WARNING } from "../environment/const";
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class ErrorBoundary extends React.Component {
       return <h1>{WARNING}</h1>;
     }
 
-    return this.props.children; 
+    return this.props.children;
   }
 }
 

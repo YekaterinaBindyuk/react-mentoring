@@ -35,10 +35,7 @@ describe("RecommendedMovies", () => {
       getRecommendedMovies: mockGetRecommendedMoviesfn,
       genres: ["Comedy"]
     };
-    const component = shallow(
-      <RecommendedMovies  {...props}
-      />
-    );
+    const component = shallow(<RecommendedMovies {...props} />);
     component.setProps({ genres: ["Comedy", "Action"] });
     expect(mockGetRecommendedMoviesfn).toHaveBeenCalled();
   });

@@ -15,7 +15,6 @@ import { MOVIE_COVER } from "../../environment/const";
 import RecommendedMovies from "./RecommendedMovies";
 
 export class MovieView extends React.Component {
-
   render = () => {
     const { getMovie } = this.props;
     const { id } = this.props.match.params;
@@ -42,7 +41,7 @@ export class MovieView extends React.Component {
           </div>
           <MovieDescription description={overview} />
         </div>
-        <RecommendedMovies genres={genres}/>
+        <RecommendedMovies genres={genres} />
       </div>
     );
   };
