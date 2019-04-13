@@ -1,6 +1,7 @@
 import React from "react";
-import { render, shallow } from "enzyme";
+import { shallow } from "enzyme";
 import { RecommendedMovies } from "./RecommendedMovies";
+import { mountWrap } from "../test-helpers/ContextWrap";
 
 describe("RecommendedMovies", () => {
   it('should render correctly in "debug" mode', () => {
@@ -21,8 +22,8 @@ describe("RecommendedMovies", () => {
         vote_count: 9
       }
     ];
-    const component = render(<RecommendedMovies moviesList={moviesList} />);
-    expect(component).toMatchSnapshot();
+    const wrappedMount = () => mountWrap(<RecommendedMovies moviesList={moviesList} />);
+    expect(wrappedMount).toMatchSnapshot();
   });
 });
 

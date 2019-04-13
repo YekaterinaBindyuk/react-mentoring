@@ -1,37 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RecommendedMovies should render correctly in "debug" mode 1`] = `
-<div
-  class="recommended"
->
-  Recommended movies
-  <div
-    class="movies-list"
-  >
-    <div
-      class="movies-list-item"
-    >
-      <img
-        alt="Guardians of the Galaxy Vol. 3"
-        class="img_small"
-        src="https://image.tmdb.org/t/p/w500/ldoY4fTZkGISMidNw60GHoNdgP8.jpg"
-      />
-      <h3
-        class="title"
-      >
-        Guardians of the Galaxy Vol. 3
-      </h3>
-      <section>
-        <div
-          class="genres"
-        >
-          Comedy
-        </div>
-      </section>
-      <div>
-        2020-05-01
-      </div>
-    </div>
-  </div>
-</div>
-`;
+exports[`RecommendedMovies should render correctly in "debug" mode 1`] = `[Function]`;

@@ -2,7 +2,7 @@ import React from "react";
 import MoviesListItem from "./movies-list-item/MoviesListItem";
 import "../../style/moviesList.css";
 
-class SearchResults extends React.Component {
+class MoviesList extends React.Component {
   render = () => {
     const { moviesList } = this.props;
     return (
@@ -24,4 +24,4 @@ class SearchResults extends React.Component {
   };
 }
 
-export default SearchResults;
+export default MoviesList;

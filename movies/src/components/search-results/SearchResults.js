@@ -3,7 +3,6 @@ import SearchResultsCount from "./SearchResultsCount";
 import MoviesList from "../movies-list/MoviesList";
 import Sorting from "../sorting/Sorting";
 import { NO_FILMS_WARNING } from "../../environment/const";
-import actionCreators from "../../redux/action-creators/actionCreators";
 import { connect } from "react-redux";
 
 import "../../style/moviesList.css";
