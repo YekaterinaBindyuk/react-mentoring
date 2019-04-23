@@ -32,9 +32,28 @@ library.add(
   faLongArrowAltLeft
 );
 
-const Root = ({ Router, location, context, store }) => (
-  (
-    <Router location={location} context={context}>
+// const Root = ({ Router, location, context, store }) => (
+//   (
+//     <Router location={location} context={context}>
+//       <Provider store={store}>
+//         <PersistGate loading={null} persistor={persistor}>
+//           <AppLogo />
+//           <Switch>
+//             <Route path="/" exact component={App} />
+//             <Route path="/search" exact component={App} />
+//             <Route path="/about" component={About} />
+//             <Route path="/movie/:id" component={MovieView} />
+//             <Route path="*" component={Page404} />
+//           </Switch>
+//         </PersistGate>
+//       </Provider>
+//     </Router>
+//   )
+// );
+const Root = () => {
+
+  return (
+      <Router>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <AppLogo />
@@ -48,8 +67,8 @@ const Root = ({ Router, location, context, store }) => (
         </PersistGate>
       </Provider>
     </Router>
-  )
-);
+  );
+}
 // const rootElement = document.getElementById("root");
 
 // ReactDOM.render(
