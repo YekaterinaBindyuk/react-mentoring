@@ -6,13 +6,11 @@ import Search from "../components/search/Search";
 import queryString from "query-string";
 import actionCreators from "../redux/action-creators/actionCreators";
 import { connect } from "react-redux";
-import AppLogo from "../components/AppLogo";
-export class Index extends React.Component {
+
+export class App extends React.Component {
 
   static async getInitialProps({ req }) {
     const userAgent = req ? req.headers['user-agent'] : navigator.userAgent;
-    console.log('App is changing to: ');
-
     return { userAgent };
   }
 
@@ -44,9 +42,7 @@ export class Index extends React.Component {
   render = () => {
     return (
       <div>
-        fofo
-        <AppLogo/>
-            {/* <ErrorBoundary>
+        {/* <ErrorBoundary>
           <Search />
           <SearchResults />
         </ErrorBoundary> */}
@@ -62,4 +58,4 @@ const mapDispatchToProps = {
 export default connect(
   null,
   mapDispatchToProps
-)(Index);
+)(App);

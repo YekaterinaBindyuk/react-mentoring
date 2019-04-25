@@ -1,18 +1,18 @@
 import React from "react";
-import MovieTitle from "./MovieTitle";
-import MovieCover from "./MovieCover";
-import MovieDescription from "./MovieDescription";
-import MovieDetails from "./MovieDetails";
-import MovieGenres from "./MovieGenres";
-import MovieRating from "./MovieRating";
-import BackButton from "../BackButton";
-import actionCreators from "../../redux/action-creators/actionCreators";
+import MovieTitle from "../components/movie/MovieTitle";
+import MovieCover from "../components/movie/MovieCover";
+import MovieDescription from "../components/movie/MovieDescription";
+import MovieDetails from "../components/movie/MovieDetails";
+import MovieGenres from "../components/movie/MovieGenres";
+import MovieRating from "../components/movie/MovieRating";
+import BackButton from "../components/BackButton";
+import actionCreators from "../redux/action-creators/actionCreators";
 import { connect } from "react-redux";
 
 import "../../style/movie.css";
 
-import { MOVIE_COVER } from "../../environment/const";
-import RecommendedMovies from "./RecommendedMovies";
+import { MOVIE_COVER } from "../environment/const";
+import RecommendedMovies from "../components/movie/RecommendedMovies";
 
 export class MovieView extends React.Component {
   componentDidMount(){
