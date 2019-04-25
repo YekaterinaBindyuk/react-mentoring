@@ -2,7 +2,6 @@ import React from "react";
 import { SEARCH_BUTTON } from "../../environment/const";
 import SearchType from "./SearchType";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { withRouter } from "react-router-dom";
 
 export class Search extends React.Component {
   constructor(props) {
@@ -58,4 +57,4 @@ export class Search extends React.Component {
   };
 }
 
-export default withRouter(Search);
+export default Search;

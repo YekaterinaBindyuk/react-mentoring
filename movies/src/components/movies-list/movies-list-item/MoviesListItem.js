@@ -11,7 +11,7 @@ class MovieListItem extends React.Component {
 
     return (
       <div className="movies-list-item">
-        <Link href={`/movie/${id}`}>
+        <Link as={`/movie/${id}`} href={`/movieView?id=${id}`}>
           <MovieCover title={title} type={MOVIE_LIST_ITEM_COVER} url={url} />
           <MovieTitle title={title} />
         </Link>

@@ -1,4 +1,5 @@
 import React from "react";
+import "babel-polyfill";
 import MovieTitle from "../components/movie/MovieTitle";
 import MovieCover from "../components/movie/MovieCover";
 import MovieDescription from "../components/movie/MovieDescription";
@@ -9,26 +10,29 @@ import BackButton from "../components/BackButton";
 import actionCreators from "../redux/action-creators/actionCreators";
 import { connect } from "react-redux";
 
-import "../../style/movie.css";
+import "../style/movie.css";
 
 import { MOVIE_COVER } from "../environment/const";
 import RecommendedMovies from "../components/movie/RecommendedMovies";
 
 export class MovieView extends React.Component {
-  componentDidMount(){
+  static async getInitialProps(context) {
+    return context.query;
+  }
+
+  componentDidMount() {
     const { getMovie } = this.props;
-    const { id } = this.props.match.params;
+    const { id } = this.props;
     getMovie(id);
   }
-  componentDidUpdate(prevProps){
-    if(prevProps !== this.props){
+  componentDidUpdate(prevProps) {
+    if (prevProps !== this.props) {
       const { getMovie } = this.props;
-      const { id } = this.props.match.params;
+      const { id } = this.props;
       getMovie(id);
     }
   }
   render = () => {
-    
     const {
       title,
       release_date,
