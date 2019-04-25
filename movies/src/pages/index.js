@@ -34,20 +34,18 @@ library.add(
 const Root = () => {
 
   return (
-      <Router>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <AppLogo />
-          <Switch>
+          {/* <Switch>
             <Route path="/" exact component={App} />
             <Route path="/search" exact component={App} />
             <Route path="/about" component={About} />
             <Route path="/movie/:id" component={MovieView} />
             <Route path="*" component={Page404} />
-          </Switch>
+          </Switch> */}
         </PersistGate>
       </Provider>
-    </Router>
   );
 }
 

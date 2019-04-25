@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 
 class BackButton extends React.Component {
   goBack = () => {
@@ -9,7 +9,7 @@ class BackButton extends React.Component {
 
   render = () => {
     return (
-      <Link to="/">
+      <Link href="/index">
         <button
           id="back-btn"
           onClick={this.goBack}
