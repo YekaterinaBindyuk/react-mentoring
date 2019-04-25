@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import App from "../components/App";
 import "bootstrap/dist/css/bootstrap.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -32,24 +31,6 @@ library.add(
   faLongArrowAltLeft
 );
 
-// const Root = ({ Router, location, context, store }) => (
-//   (
-//     <Router location={location} context={context}>
-//       <Provider store={store}>
-//         <PersistGate loading={null} persistor={persistor}>
-//           <AppLogo />
-//           <Switch>
-//             <Route path="/" exact component={App} />
-//             <Route path="/search" exact component={App} />
-//             <Route path="/about" component={About} />
-//             <Route path="/movie/:id" component={MovieView} />
-//             <Route path="*" component={Page404} />
-//           </Switch>
-//         </PersistGate>
-//       </Provider>
-//     </Router>
-//   )
-// );
 const Root = () => {
 
   return (
@@ -69,23 +50,5 @@ const Root = () => {
     </Router>
   );
 }
-// const rootElement = document.getElementById("root");
 
-// ReactDOM.render(
-//   <Router>
-//     <Provider store={store}>
-//       <PersistGate loading={null} persistor={persistor}>
-//         <AppLogo />
-//         <Switch>
-//           <Route path="/" exact component={App} />
-//           <Route path="/search" exact component={App} />
-//           <Route path="/about" component={About} />
-//           <Route path="/movie/:id" component={MovieView} />
-//           <Route path="*" component={Page404} />
-//         </Switch>
-//       </PersistGate>
-//     </Provider>
-//   </Router>,
-//   rootElement
-// );
 export default hot(module)(Root);
