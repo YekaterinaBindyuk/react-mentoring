@@ -1,7 +1,7 @@
 export const BASE_IMG_CLASSNAME = 'img';
 export const MOVIE_LIST_ITEM_COVER = 'small';
 export const MOVIE_COVER = 'large';
-export const MAIN_LOGO = 'http://localhost:8080/src/images/logo.png';
+export const MAIN_LOGO = '/static/images/logo.png';
 export const SEARCH_BUTTON = 'Search';
 export const TITLE_TYPE_BUTTON = 'title';
 export const GENRE_TYPE_BUTTON = 'genre';
