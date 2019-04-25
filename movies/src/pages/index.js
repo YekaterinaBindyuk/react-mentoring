@@ -36,7 +36,8 @@ const Root = () => {
   return (
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <AppLogo />
+          <AppLogo/>
+          <App/>
           {/* <Switch>
             <Route path="/" exact component={App} />
             <Route path="/search" exact component={App} />

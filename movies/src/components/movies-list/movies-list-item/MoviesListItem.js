@@ -3,7 +3,7 @@ import MovieCover from "../../movie/MovieCover";
 import MovieTitle from "../../movie/MovieTitle";
 import MovieGenres from "../../movie/MovieGenres";
 import { MOVIE_LIST_ITEM_COVER } from "../../../environment/const";
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 
 class MovieListItem extends React.Component {
   render = () => {
@@ -11,7 +11,7 @@ class MovieListItem extends React.Component {
 
     return (
       <div className="movies-list-item">
-        <Link to={`/movie/${id}`}>
+        <Link href={`/movie/${id}`}>
           <MovieCover title={title} type={MOVIE_LIST_ITEM_COVER} url={url} />
           <MovieTitle title={title} />
         </Link>
