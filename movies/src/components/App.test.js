@@ -1,5 +1,5 @@
 import React from "react";
-import App from "./App";
+import App from "../pages/_app";
 import { shallowWrap } from './test-helpers/ContextWrap';
 
 describe("App", () => {
