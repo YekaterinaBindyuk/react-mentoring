@@ -1,3 +1,4 @@
 movies/node_modules
 movies/src/.next
-
+movies/coverage
+movies/src/components/_snapshots_

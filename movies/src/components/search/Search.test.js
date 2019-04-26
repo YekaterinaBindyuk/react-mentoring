@@ -2,6 +2,7 @@ import "jsdom-global/register";
 import React from "react";
 import { shallow, mount } from "enzyme";
 import { Search } from "./Search";
+import Router from "next/router";
 
 it("updates state: searchInput correctly", () => {
   const mockSearchMoviesfn = jest.fn();
@@ -22,8 +23,9 @@ it("updates state: searchType correctly", () => {
 });
 
 it("should search movies", () => {
-  const historyMock = {push: jest.fn()}
-  const wrapper = shallow(<Search history={historyMock} />);
+  const mockedRouter = {push: jest.fn()};
+  Router.router = mockedRouter;
+  const wrapper = shallow(<Search />);
   wrapper.find("button#search-btn").simulate("click");
-  expect(historyMock.push).toHaveBeenCalled();
+  expect(mockedRouter.push).toHaveBeenCalled();
 });

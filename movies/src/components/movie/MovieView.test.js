@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { MovieView } from "./MovieView";
+import { MovieView } from "../../pages/MovieView";
 
 it("should get movie", () => {
   const mockGetMoviefn = jest.fn();
