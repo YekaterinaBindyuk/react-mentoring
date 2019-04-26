@@ -4,6 +4,8 @@ import { Provider } from "react-redux";
 import { store, persistor } from "../redux/reducers/configureStore";
 import { PersistGate } from "redux-persist/integration/react";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import "bootstrap/dist/css/bootstrap.css";
+
 
 import {
   faSearch,
