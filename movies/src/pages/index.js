@@ -31,7 +31,6 @@ export class Index extends React.Component {
   render = () => {
     return (
       <div>
-        fofo
         <AppLogo />
         <ErrorBoundary>
           <Search />

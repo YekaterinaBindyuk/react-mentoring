@@ -1,4 +1,4 @@
-import App, { Container } from "next/app";
+import App from "next/app";
 import React from "react";
 import { Provider } from "react-redux";
 import { store, persistor } from "../redux/reducers/configureStore";
@@ -30,15 +30,6 @@ class MyApp extends App {
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
         <Component {...pageProps} />
-          {/* <AppLogo/>
-          <App/> */}
-          {/* <Switch>
-            <Route path="/" exact component={App} />
-            <Route path="/search" exact component={App} />
-            <Route path="/about" component={About} />
-            <Route path="/movie/:id" component={MovieView} />
-            <Route path="*" component={Page404} />
-          </Switch> */}
         </PersistGate>
       </Provider>
     );
