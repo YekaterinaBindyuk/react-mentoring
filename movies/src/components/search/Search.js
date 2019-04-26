@@ -2,6 +2,7 @@ import React from "react";
 import { SEARCH_BUTTON } from "../../environment/const";
 import SearchType from "./SearchType";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Router from 'next/router';
 
 export class Search extends React.Component {
   constructor(props) {
@@ -11,8 +12,11 @@ export class Search extends React.Component {
 
   onSearchClick = () => {
     const { searchInput, searchType } = this.state;
-    const url = `/search?searchInput=${searchInput}&searchType=${searchType}`;
-    this.props.history.push(url);
+    Router.push({
+      pathname: '/index',
+      query: { searchInput: searchInput,
+        searchType: searchType}
+    });
   };
 
   onSearchByTitleClick = () => {
