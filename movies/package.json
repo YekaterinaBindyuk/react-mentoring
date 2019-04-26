@@ -22,10 +22,9 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "serve": "node server.js",
+    "serve": "cd src && node server.js",
     "dev": "next ./src",
     "build": "next build ./src",
-    "start": "next start ./src",
     "test": "jest",
     "cypress": "cypress open"
   },
