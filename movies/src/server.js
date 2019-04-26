@@ -13,10 +13,6 @@ app
     server.get("*", (req, res) => {
       return handle(req, res, "/index");
     });
-    server.get("/about", (req, res) => {
-      const actualPage = "/about";
-      app.render(req, res, actualPage);
-    });
     server.get("/movie", (req, res) => {
       const actualPage = "/movieView";
       const queryParams = { id: req.params.id };
