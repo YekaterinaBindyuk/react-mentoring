@@ -1,5 +1,4 @@
-import { BrowserRouter } from 'react-router-dom';
-import Enzyme, { shallow, mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { createMemoryHistory } from 'history';
 
 import { shape } from 'prop-types';
