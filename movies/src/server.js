@@ -15,7 +15,6 @@ app
       const queryParams = { id: req.params.id }
       app.render(req, res, actualPage, queryParams)
     })
-
     server.get('*', (req, res) => {
       return handle(req, res)
     })

@@ -21,8 +21,8 @@ export class Index extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps !== this.props) {
-      const { searchMovies, searchInput, searchType } = this.props;
+    const { searchMovies, searchInput, searchType } = this.props;
+    if (prevProps.searchInput !== searchInput || prevProps.searchType !== searchType) {
       if (searchInput && searchType) {
         searchMovies(searchInput, searchType);
       }

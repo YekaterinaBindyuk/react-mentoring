@@ -26,9 +26,9 @@ export class MovieView extends React.Component {
     getMovie(id);
   }
   componentDidUpdate(prevProps) {
-    if (prevProps !== this.props) {
+    const { id } = this.props;
+    if (prevProps.id !== id) {
       const { getMovie } = this.props;
-      const { id } = this.props;
       getMovie(id);
     }
   }

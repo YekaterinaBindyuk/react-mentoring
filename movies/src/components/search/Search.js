@@ -15,7 +15,7 @@ export class Search extends React.Component {
     Router.push({
       pathname: "/index",
       query: { searchInput: searchInput, searchType: searchType },
-    },`/index/${searchInput}`);
+    });
   };
 
   onSearchByTitleClick = () => {
