@@ -3,3 +3,4 @@ movies/src/.next
 movies/coverage
 movies/src/components/_snapshots_
 *node_modules/*
+.eslintcache
