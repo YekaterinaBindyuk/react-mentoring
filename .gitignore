@@ -1,4 +1,5 @@
-movies/node_modules
+movies/node_modules/
 movies/src/.next
 movies/coverage
 movies/src/components/_snapshots_
+*node_modules/*
