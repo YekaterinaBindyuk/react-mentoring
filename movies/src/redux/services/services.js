@@ -5,22 +5,22 @@ const getMovies = () => {
   return axios.get(MOVIES_URL).then(({ data }) => data);
 };
 
-const getMovie = id => {
+const getMovie = (id: number) => {
   const url = MOVIES_URL + "/" + id;
   return axios.get(url).then(({ data }) => data);
 };
 
-const getRecommendedMovies = genres => {
+const getRecommendedMovies = (genres: Array<string>) => {
   const url = MOVIES_URL + "?filter=" + genres.join(",");
   return axios.get(url).then(({ data }) => data);
 };
 
-const sortMovies = sortBy => {
+const sortMovies = (sortBy: string) => {
   const url = MOVIES_URL + "?sortBy=" + sortBy + "&sortOrder=desc";
   return axios.get(url).then(({ data }) => data);
 };
 
-const searchMovies = (searchValue, searchBy) => {
+const searchMovies = (searchValue: string, searchBy: string) => {
   const url = MOVIES_URL + "?search=" + searchValue + "&searchBy=" + searchBy;
   return axios.get(url).then(({ data }) => data);
 };

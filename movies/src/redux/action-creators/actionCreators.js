@@ -15,14 +15,14 @@ export function getMovieList() {
   };
 }
 
-export function getMovieListSuccess(movies) {
+export function getMovieListSuccess(movies: Array<mixed>) {
   return {
     type: GET_MOVIE_LIST_SUCCESS,
     movies
   };
 }
 
-export function getMovie(id) {
+export function getMovie(id: number) {
   return dispatch => {
     return services.getMovie(id).then(res => {
       dispatch(getMovieSuccess(res));
@@ -37,7 +37,7 @@ export function getMovieSuccess(movie) {
   };
 }
 
-export function getRecommendedMovies(genres) {
+export function getRecommendedMovies(genres: Array<string>) {
   return dispatch => {
     return services.getRecommendedMovies(genres).then(res => {
       dispatch(getRecommendedMoviesSuccess(res.data));
@@ -45,14 +45,14 @@ export function getRecommendedMovies(genres) {
   };
 }
 
-export function getRecommendedMoviesSuccess(movies) {
+export function getRecommendedMoviesSuccess(movies: Array<mixed>) {
   return {
     type: GET_RECOMMENDED_MOVIES_SUCCESS,
     movies
   };
 }
 
-export function sortMovies(sortBy) {
+export function sortMovies(sortBy: string) {
   return dispatch => {
     return services.sortMovies(sortBy).then(res => {
       dispatch(sortMoviesSuccess(res.data));
@@ -60,14 +60,14 @@ export function sortMovies(sortBy) {
   };
 }
 
-export function sortMoviesSuccess(movies) {
+export function sortMoviesSuccess(movies: Array<mixed>) {
   return {
     type: SORT_MOVIES_SUCCESS,
     movies
   };
 }
 
-export function searchMovies(searchValue, searchBy) {
+export function searchMovies(searchValue: string, searchBy: string) {
   return dispatch => {
     return services.searchMovies(searchValue, searchBy).then(res => {
       dispatch(searchMoviesSuccess(res.data));
@@ -75,7 +75,7 @@ export function searchMovies(searchValue, searchBy) {
   };
 }
 
-export function searchMoviesSuccess(movies) {
+export function searchMoviesSuccess(movies: Array<mixed>) {
   return {
     type: SEARCH_MOVIES_SUCCESS,
     movies

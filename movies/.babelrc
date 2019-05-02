@@ -1,14 +1,14 @@
 {
-   "name": "my-project",
-   "main": "lib/index.js",
-   "scripts": {
-   "build": "babel src/ -d lib/",
-   "prepublish": "npm run build"
-   },
+   // "name": "my-project",
+   // "main": "lib/index.js",
+   // "scripts": {
+   // "build": "babel src/ -d lib/",
+   // "prepublish": "npm run build"
+   // },
    "presets": [
    "@babel/preset-env",
    "@babel/preset-react",
-   "flow"
+   "@babel/preset-flow"
 ],
    "plugins": ["@babel/plugin-proposal-class-properties"]
 }
