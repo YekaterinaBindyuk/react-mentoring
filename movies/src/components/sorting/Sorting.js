@@ -7,6 +7,20 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import actionCreators from "../../redux/action-creators/actionCreators";
 import { connect } from "react-redux";
+import { createSelector } from 'reselect';
+import Button from ".././Button";
+
+const getMovies = movies => movies;
+
+const sortByRating = createSelector(
+  getMovies,
+  (movies, sortingType) => (console.log('calculate'), movies.sort())
+);
+
+const sortByReleaseDate = createSelector(
+  getMovies,
+  (movies, sortingType) => (console.log('calculate'), movies.sort())
+);
 
 export class Sorting extends React.Component {
   constructor(props) {
@@ -34,15 +48,15 @@ export class Sorting extends React.Component {
     return (
       <div className="sort">
         {SORTING_TEXT}
-        <button
+        <Button color={'#373E6E'}
           id="sort-by-release-btn"
           className="btn btn-dark m-1"
           onClick={this.onSortByReleaseClick}
         >
           <FontAwesomeIcon icon="calendar-alt" className="mr-1" />
           {RELEASE_TYPE_BUTTON}
-        </button>
-        <button
+        </Button>
+        <Button color={'#373E6E'}
           id="sort-by-rating-btn"
           className="btn btn-dark"
           onClick={this.onSortByRatingClick}
@@ -51,7 +65,7 @@ export class Sorting extends React.Component {
           <FontAwesomeIcon icon="star" />
           <FontAwesomeIcon icon="star-half-alt" className="mr-1" />
           {RATING_TYPE_BUTTON}
-        </button>
+        </Button>
       </div>
     );
   };

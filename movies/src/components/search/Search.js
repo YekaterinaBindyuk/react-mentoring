@@ -3,7 +3,7 @@ import { SEARCH_BUTTON } from "../../environment/const";
 import SearchType from "./SearchType";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Router from "next/router";
-
+import Button from ".././Button"
 export class Search extends React.Component {
   constructor(props) {
     super(props);
@@ -41,14 +41,14 @@ export class Search extends React.Component {
           onChange={this.onSearchValueChange}
         />
 
-        <button
+        <Button color={'green'}
           id="search-btn"
           className="btn btn-success m-2 ml-3"
           onClick={this.onSearchClick}
         >
           <FontAwesomeIcon icon="search" className="mr-1" />
           {SEARCH_BUTTON}
-        </button>
+        </Button>
         <div className="search-type">
           <SearchType
             onSearchByGenreClick={this.onSearchByGenreClick}

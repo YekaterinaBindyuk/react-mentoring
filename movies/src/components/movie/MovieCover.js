@@ -1,10 +1,15 @@
 import React from "react";
-import { BASE_IMG_CLASSNAME } from "../../environment/const";
+import styled from 'styled-components';
+
+const Image = styled.img`
+height: ${props => props.size === 'large' ? '500px' : '400px'};
+width: ${props => props.size === 'large' ? '400px' : '300px'}
+`;
 
 const MovieCover = props => {
-  const { title, type, url } = props;
+  const { title, url, type } = props;
   return (
-    <img src={url} alt={title} className={`${BASE_IMG_CLASSNAME}_${type}`} />
+    <Image src={url} alt={title} size={type}/>
   );
 };
 
