@@ -14,7 +14,6 @@ const sortByReleaseDateCallback = (movie1, movie2) => {
 export const sortMovies = createSelector(
   [getMovies, getSortingType], 
   (movies, sortingType) => {
-      movies.sort(sortingType === 'vote_average' ? sortByRatingCallback : sortByReleaseDateCallback);    
-      return movies;
+      return movies.sort(sortingType === 'vote_average' ? sortByRatingCallback : sortByReleaseDateCallback);    
     }
   );
