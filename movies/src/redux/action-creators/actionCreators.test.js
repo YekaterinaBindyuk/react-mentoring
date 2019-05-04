@@ -10,8 +10,6 @@ import {
   getMovieListSuccess,
   getMovieSuccess,
   getRecommendedMoviesSuccess,
-  sortMoviesSuccess,
-  searchMoviesSuccess,
   getMovie,
   getRecommendedMovies
 } from "./actionCreators";
