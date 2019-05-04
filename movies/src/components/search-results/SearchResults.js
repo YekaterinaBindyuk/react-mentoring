@@ -9,9 +9,7 @@ import { sortMovies } from '../../selectors/SortingSelector'
 import "../../style/moviesList.css";
 
 export class SearchResults extends React.Component {
-  componentDidUpdate = () =>{
-console.log('rerender');
-  }
+
   render = () => {
     const { moviesList } = this.props;
     return (
