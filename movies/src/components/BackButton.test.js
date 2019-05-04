@@ -7,6 +7,6 @@ it("Goback logs correctly", () => {
     log: jest.fn()
   };
   const wrapper = shallow(<BackButton />);
-  wrapper.find("button#back-btn").simulate("click");
+  wrapper.find("#back-btn").simulate("click");
   expect(global.console.log).toHaveBeenCalledWith("goBack button clicked");
 });

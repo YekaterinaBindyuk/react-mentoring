@@ -7,20 +7,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import actionCreators from "../../redux/action-creators/actionCreators";
 import { connect } from "react-redux";
-import { createSelector } from 'reselect';
 import Button from ".././Button";
-
-const getMovies = movies => movies;
-
-const sortByRating = createSelector(
-  getMovies,
-  (movies, sortingType) => (console.log('calculate'), movies.sort())
-);
-
-const sortByReleaseDate = createSelector(
-  getMovies,
-  (movies, sortingType) => (console.log('calculate'), movies.sort())
-);
 
 export class Sorting extends React.Component {
   constructor(props) {

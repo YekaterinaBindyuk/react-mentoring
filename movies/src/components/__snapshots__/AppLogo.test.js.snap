@@ -7,7 +7,7 @@ exports[`renders correctly 1`] = `
   <img
     alt="logo"
     className="app-logo"
-    src="http://localhost:8080/src/images/logo.png"
+    src="/static/images/logo.png"
   />
 </a>
 `;

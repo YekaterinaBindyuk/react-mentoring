@@ -4,10 +4,14 @@ import MoviesList from "../movies-list/MoviesList";
 import Sorting from "../sorting/Sorting";
 import { NO_FILMS_WARNING } from "../../environment/const";
 import { connect } from "react-redux";
+import { sortMovies } from '../../selectors/SortingSelector'
 
 import "../../style/moviesList.css";
 
 export class SearchResults extends React.Component {
+  componentDidUpdate = () =>{
+console.log('rerender');
+  }
   render = () => {
     const { moviesList } = this.props;
     return (
@@ -31,7 +35,7 @@ export class SearchResults extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    moviesList: state.movies
+    moviesList: sortMovies(state)
   };
 };
 

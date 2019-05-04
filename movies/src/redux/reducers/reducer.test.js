@@ -6,7 +6,8 @@ describe("reducer", () => {
     expect(reducer(undefined, {})).toEqual({
       movies: [],
       movie: {},
-      recommendedMovies: []
+      recommendedMovies: [],
+      "sortingType": "release_date"
     });
   });
 
@@ -36,15 +37,6 @@ describe("reducer", () => {
       })
     ).toEqual({
       recommendedMovies: ["test"]
-    });
-
-    expect(
-      reducer([], {
-        type: actions.SORT_MOVIES_SUCCESS,
-        movies: ["test"]
-      })
-    ).toEqual({
-      movies: ["test"]
     });
 
     expect(

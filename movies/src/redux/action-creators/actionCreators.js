@@ -52,19 +52,17 @@ export function getRecommendedMoviesSuccess(movies: Array<mixed>) {
   };
 }
 
-export function sortMovies(sortBy: string) {
-  return dispatch => {
-    return services.sortMovies(sortBy).then(res => {
-      dispatch(sortMoviesSuccess(res.data));
-    });
+export function sortMoviesSuccess(sortBy: string) {
+  return {
+    type: SORT_MOVIES_SUCCESS,
+    sortingType: sortBy
   };
 }
 
-export function sortMoviesSuccess(movies: Array<mixed>) {
-  return {
-    type: SORT_MOVIES_SUCCESS,
-    movies
-  };
+export function sortMovies(sortBy: string) {
+  return dispatch => {
+    return dispatch(sortMoviesSuccess(sortBy));
+  }
 }
 
 export function searchMovies(searchValue: string, searchBy: string) {

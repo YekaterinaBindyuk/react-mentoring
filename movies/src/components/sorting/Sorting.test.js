@@ -5,8 +5,8 @@ import { Sorting } from "./Sorting";
 it("updates state correctly", () => {
   const mockSortfn = jest.fn();
   const wrapper = shallow(<Sorting sortMovies={mockSortfn} />);
-  wrapper.find("button#sort-by-release-btn").simulate("click");
+  wrapper.find("#sort-by-release-btn").simulate("click");
   expect(wrapper.state("sortingType")).toEqual("release_date");
-  wrapper.find("button#sort-by-rating-btn").simulate("click");
+  wrapper.find("#sort-by-rating-btn").simulate("click");
   expect(wrapper.state("sortingType")).toEqual("vote_average");
 });

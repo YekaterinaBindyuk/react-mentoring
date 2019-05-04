@@ -72,23 +72,6 @@ describe("async actions", () => {
     });
   });
 
-  it("creates SORT_MOVIES_SUCCESS when fetching sorted movies has been done", () => {
-    const sortBy = "title";
-    nock(REST_URL)
-      .get("/movies?sortBy=" + sortBy + "&sortOrder=desc")
-      .reply(200, { data: ["test", "test2"] });
-
-    const expectedActions = [
-      { type: types.SORT_MOVIES_SUCCESS, movies: ["test", "test2"] }
-    ];
-    const store = mockStore({ movies: [], movie: {}, recommendedMovies: [] });
-
-    return store.dispatch(actions.sortMovies(sortBy)).then(() => {
-      // return of async actions
-      expect(store.getActions()).toEqual(expectedActions);
-    });
-  });
-
   it("creates SEARCH_MOVIES_SUCCESS when searching movies has been done", () => {
     const searchValue = "test";
     const searchBy = "title";
@@ -132,24 +115,6 @@ describe("Recommended Movies success", () => {
   it("returnes correct value", () => {
     expect(getRecommendedMoviesSuccess(["test"])).toEqual({
       type: types.GET_RECOMMENDED_MOVIES_SUCCESS,
-      movies: ["test"]
-    });
-  });
-});
-
-describe("Sort Movies success", () => {
-  it("returnes correct value", () => {
-    expect(sortMoviesSuccess(["test"])).toEqual({
-      type: types.SORT_MOVIES_SUCCESS,
-      movies: ["test"]
-    });
-  });
-});
-
-describe("Sort Movies success", () => {
-  it("returnes correct value", () => {
-    expect(searchMoviesSuccess(["test"])).toEqual({
-      type: types.SEARCH_MOVIES_SUCCESS,
       movies: ["test"]
     });
   });

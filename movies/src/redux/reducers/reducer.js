@@ -3,7 +3,8 @@ import * as actions from "../actions/actions";
 const initState = {
   movies: [],
   movie: {},
-  recommendedMovies: []
+  recommendedMovies: [],
+  sortingType: 'release_date'
 };
 
 export default function reducer(state = initState, action) {
@@ -15,7 +16,7 @@ export default function reducer(state = initState, action) {
     case actions.GET_RECOMMENDED_MOVIES_SUCCESS:
       return { ...state, recommendedMovies: action.movies };
     case actions.SORT_MOVIES_SUCCESS:
-      return { ...state, movies: action.movies };
+      return { ...state, sortingType: action.sortingType };
     case actions.SEARCH_MOVIES_SUCCESS:
       return { ...state, movies: action.movies };
     default:
