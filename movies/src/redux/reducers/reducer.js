@@ -4,7 +4,7 @@ const initState = {
   movies: [],
   movie: {},
   recommendedMovies: [],
-  sortingType: 'release_date'
+  sortingType: null
 };
 
 export default function reducer(state = initState, action) {
