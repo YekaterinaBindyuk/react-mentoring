@@ -6,7 +6,7 @@ const About = () => {
     <main className="text-center">
       <div>
         This website has been developed for educational purposes. Don't be too
-        judgemental. Styling was intented to be minimalistic since the main focus was on learning ReactJS
+        judgemental. Styling was intented to be minimalist since the main focus was on learning ReactJS
       </div>
       <BackButton />
     </main>
